@@ -1,26 +1,46 @@
-# 🖤🛣️ BlackRoad Blockchain Explorer
+# BlackRoad Blockchain Explorer
 
-**Wave 7** | Part of the BlackRoad Product Empire - 400+ enterprise solutions
+Multi-chain blockchain explorer with real-time analytics. Self-hosted, sovereign, and privacy-preserving.
 
-## 🚀 Quick Start
+## Features
+
+- **Multi-Chain** - Ethereum, Bitcoin, Solana, and more
+- **Real-Time** - Live transaction streaming
+- **Analytics** - Wallet tracking and flow analysis
+- **Self-Hosted** - Run your own explorer
+- **API Access** - Full REST and WebSocket APIs
+- **Privacy** - No third-party tracking
+
+## Supported Chains
+
+- Ethereum (mainnet, testnets, L2s)
+- Bitcoin (mainnet, testnet)
+- Solana
+- Polygon, Arbitrum, Optimism
+- Custom EVM chains
+
+## Quick Start
 
 ```bash
-./blackroad-blockchain-explorer.sh
+./blackroad-blockchain-explorer.sh init
+./blackroad-blockchain-explorer.sh index --chain ethereum
+./blackroad-blockchain-explorer.sh serve --port 3000
 ```
 
-## 🎨 BlackRoad Design System
+## API Examples
 
-- **Hot Pink**: #FF1D6C
-- **Amber**: #F5A623  
-- **Electric Blue**: #2979FF
-- **Violet**: #9C27B0
+```bash
+# Get transaction
+curl localhost:3000/api/tx/0x123...
 
-## 📚 Documentation
+# Get wallet balance
+curl localhost:3000/api/address/0xabc.../balance
 
-Full docs: https://docs.blackroad.io
+# Stream new blocks
+wscat -c ws://localhost:3000/ws/blocks
+```
 
-## 🖤 BlackRoad Empire
+## License
 
-Part of **400+ products** across **52 categories**. Built with ∞ vision.
-
-**BlackRoad OS, Inc.** | Built with Claude | Wave 7
+Copyright (c) 2026 BlackRoad OS, Inc. All rights reserved.
+Proprietary software. For licensing: blackroad.systems@gmail.com
